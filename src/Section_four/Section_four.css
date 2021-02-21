@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: local('Rajdhani'), url('./Fonts/gadugib.ttf') format('truetype');
+}
+
+:root{
+    --dark-blue : #495464;
+    --medium-blue: #BBBFCA;
+    --light-blue: #E8E8E8;
+    --plain-white: #F4F4F2;
+    --dark-pink: #790C5A;
+    --medium-pink: #CC0E74;
+    --light-pink: #E6739F;
+    --pale-pink: #F1D4D4;
+}
+
+.section_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr  ;
+    overflow: hidden;
+    background-color: var(--light-blue);
+}
+
+.section_main_heading{
+    margin: 90px;
+    font-size: 43px;
+    font-family: 'Rajdhani';
+    color: #827474;
+}
+
+.phase1{
+    grid-row: 1/2;
+}
+.phase2{
+    margin: auto;
+}
+.phase2 img{
+    width: 600px;
+    opacity: 50%;
+}
+
+.section_main_picks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 7px;
+    color: #827474;
+}
+.section_main_picks img{
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+}
+.section_main_picks a{
+    text-decoration: none;
+    color: gray;
+}
+
+.section_main_list{
+    margin: 90px;
+}
+
+.section_four_triangle1{
+     position: absolute;
+    width: 0;
+      height: 0;
+      top:2100px;
+      left: 1323px;
+      border-left: 350px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 800px solid #9a888842;
+      transform: rotate(90deg);
+      z-index: -1;
+}
+
+.section_four_triangle2{
+     position: absolute;
+    width: 0;
+      height: 0;
+      top:2060px;
+      left: 1353px;
+      border-left: 180px solid transparent;
+      border-right: 60px solid transparent;
+      border-top: 800px solid #F5F5F5;
+      transform: rotate(260deg);
+      z-index: -1;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .section_main_list{
+        margin: auto;
+    }
+    .phase2 img{
+        display: none;
+    }
+}

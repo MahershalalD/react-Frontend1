@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --dark-blue : #495464;
+    --medium-blue: #BBBFCA;
+    --light-blue: #E8E8E8;
+    --plain-white: #F4F4F2;
+    --dark-pink: #790C5A;
+    --medium-pink: #CC0E74;
+    --light-pink: #E6739F;
+    --pale-pink: #F1D4D4;
+}
+
+@font-face {
+  font-family: 'TaileBold';
+  src: local('TaileBOld'), url('../Fonts/taileb.ttf') format('truetype');
+}
+
+
+.section-wrapper{
+    background-color: var(--light-blue);
+    
+}
+.section-wrapper2{
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    
+}
+
+.word-part{
+    grid-column: 2/3;
+    margin:auto 0;
+
+}
+.word-sen2{
+   font-family: 'TaileBold';
+   margin: 10px; 
+   color: #49546468;
+}
+.word-part div{
+    margin: 0 5px;
+    font-size: 30px;
+    font-family: 'TaileBold';
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+.produc{
+    background-color: var(--plain-white);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.word-btn{
+    background-color: var(--medium-pink);
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+.svg-part{
+   grid-column: 3/4;
+}
+
+
+.svg-part-svg{
+    height: 700px;
+    width: 700px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .section-wrapper2{
+        grid-template-columns: auto;
+       grid-template-rows: 1fr;
+    }
+    .word-part div{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+    .bemore{
+        flex-direction: column;
+        align-items: unset !important;
+    }
+    .word-sen2{
+        word-wrap: break-word;
+        font-size: 25px;
+    }
+    .word-part{
+    grid-row: 1/2;
+    margin: 30px;
+    grid-column: 1/2;
+}
+.svg-part{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.svg-part-svg{
+    height: 400px;
+    width: 400px;
+    margin: 2px;
+}
+}
+@media only screen and (max-width: 400px) {
+
+
+    .svg-part-svg{
+    height: 300px !important;
+    width: 300px !important;
+    margin: 2px;
+}
+}

@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --dark-blue : #495464;
+    --medium-blue: #BBBFCA;
+    --light-blue: #E8E8E8;
+    --plain-white: #F4F4F2;
+    --dark-pink: #790C5A;
+    --medium-pink: #CC0E74;
+    --light-pink: #E6739F;
+    --pale-pink: #F1D4D4;
+}
+
+@font-face {
+  font-family: 'Library3AM';
+  src: local('Library3AM'), url('../Fonts/Library\ 3\ am.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Taile';
+  src: local('Taile'), url('../Fonts/taile.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 120px;
+    background-color: var(--light-blue);
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+}
+.text-link ul{
+   display: flex;
+    align-items: center; 
+    flex-direction: row;
+    list-style: none;
+}
+.text-link a{
+    text-decoration: none;
+    margin: 0 50px;
+    font-family: 'Taile';
+    color: var(--dark-blue);
+}
+.text-link-bold{
+    font-weight: bold;
+}
+
+
+.nav-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-logo-1{
+   display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+.nav-logo-2{
+    cursor: pointer;
+}
+.nav-logo-2 div{
+    display: none;
+    width: 25px;
+    height: 3px;
+    background-color: var(--medium-pink);
+    margin: 3px;
+    border-radius: 10px;
+}
+.logo-nav{
+    width:70px;
+    height: 70px;
+}
+.logo-text{
+   font-family: 'Library3AM';
+   font-size: 30px;
+   color: var(--dark-blue);
+}
+
+.acc-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-btn{
+    background-color: var(--medium-pink);
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+.nav-btn-out{
+    background-color:transparent;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    margin: 0 10px;
+    border: 2px solid var(--medium-pink);
+    border-radius: 5px;
+    color: var(--medium-pink);
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 600px) {
+  .nav-bar{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-height: 60px;
+    transition:all 1s ease;
+}
+.logo-nav{
+    width:60px;
+    height: 60px;
+}
+.logo-text{
+   font-family: 'Library3AM';
+   font-size: 25px;
+   color: var(--dark-blue);
+}
+.nav-link{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+@keyframes fade_in_show {
+     0% {
+          opacity: 0;
+          transform: scale(0)
+     }
+
+     100% {
+          opacity: 1;
+          transform: scale(1)
+     }
+}
+@keyframes fade_out_show {
+     100% {
+          opacity: 1;
+          transform: scale(1)
+     }
+
+     0% {
+          opacity: 0;
+          transform: scale(0)
+     }
+}
+.nav-logo{
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.text-link ul{
+    display: flex;
+    flex-direction: column;
+}
+.text-link li{
+    margin: 20px 0;
+}
+.nav-logo-2 div{
+    display: block;
+    margin-left: -10px;
+    margin-right: 15px;
+}
+.acc-icon{
+    justify-content: right;
+    display: inline-flex;
+    align-items: center;
+}
+.acc-icon-color{
+    color: var(--dark-blue);
+}
+.acc-box{
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    right: 10%;
+    animation: zoom 0.5s ease;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.acc-box ul{
+    list-style: none;
+    background-color: var(--plain-white);
+    padding: 8px 8px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.19); */
+}
+.acc-box li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    padding: 8px 15px;
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+.acc-box li:hover{
+    background-color: var(--medium-pink);
+    color: var(--plain-white) !important;
+}
+}
